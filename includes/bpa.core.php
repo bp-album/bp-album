@@ -4,12 +4,12 @@
  * BP-ALBUM CORE
  * Handles the overall operations of the plugin
  *
- * @versoin 0.1.8.14
+ * @versoin 0.1.8.15
  * @since 0.1.8.0
  * @package BP-Album
  * @subpackage Main
  * @license GPL v2.0
- * @link https://github.com/BP-Media/bp-album
+ * @link https://github.com/bp-abum/bp-album
  *
  * ========================================================================================================
  */
@@ -20,11 +20,8 @@ define ( 'BP_ALBUM_IS_INSTALLED', 1 );
 // Constant for the plugin DB version
 define ( 'BP_ALBUM_DB_VERSION', '0.2' );
 
-// Internal version number (Google Code repository commit number)
-define ( 'BP_ALBUM_VERSION', '2370' );
-
 // Version of plugin shown on admin screen. This lets us show text like "0.1.9-RC1"
-define ( 'BP_ALBUM_DISPLAY_VERSION', '0.1.8.14' );
+define ( 'BP_ALBUM_DISPLAY_VERSION', '0.1.8.15' );
 
 //////////////////////////////////////////////////////////////////////////////////
 /**
@@ -45,7 +42,7 @@ require ( dirname( __FILE__ ) . '/utils/class.version.check.php' );
 
 	if ( is_admin() ) { // Only display this message in the admin area
 
-		$message = 'Your sever does not meet the minumum requirements to run Bp-Album, this means the plugin may not function correctly. Please check that you have the required Wordpress and BuddyPress versions, as well
+		$message = 'Your sever does not meet the minumum requirements to run Bp-Album, this means the plugin may not function correctly. Please check that you have the required WordPress and BuddyPress versions, as well
                                     as up to date versions of PHP, MYSQL and the GDLib.';
 
 		echo '<div class="error fade"><p>'.$message.'</p></div>';
@@ -55,9 +52,6 @@ require ( dirname( __FILE__ ) . '/utils/class.version.check.php' );
 
             // Load translation files
             load_plugin_textdomain('bp-album', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/');
-
-            // Load core classes and components
-            // Have a feeling that some WP notices are occurring due to the fact that these are being loaded before the db installs on a new installation.
 
             // Backpat functions for < BP 1.7
             if ( ! class_exists( 'BP_Theme_Compat' ) )
@@ -77,7 +71,7 @@ require ( dirname( __FILE__ ) . '/utils/class.version.check.php' );
 /**
  * bp_album_check_installed()
  *
- * @version 0.1.8.14
+ * @version 0.1.8.15
  *  @since 0.1.8.0
  */
 function bp_album_check_installed() {
@@ -93,7 +87,7 @@ add_action( 'admin_menu', 'bp_album_check_installed' );
 /**
  * bp_album_install()
  *
- * @version 0.1.8.14
+ * @version 0.1.8.15
  *  @since 0.1.8.0
  */
 function bp_album_install() {
@@ -186,7 +180,7 @@ register_activation_hook( __FILE__, 'bp_album_install' );
  *
  * Sets up BP-Album's global variables.
  *
- * @version 0.1.8.14
+ * @version 0.1.8.15
  * @since 0.1.8.0
  */
 function bp_album_setup_globals() {
@@ -238,7 +232,7 @@ add_action( 'admin_menu', 'bp_album_setup_globals', 2 );
 /**
  * Adds the BP-Album admin menu to the WordPress "Site" admin menu
  *
- * @version 0.1.8.14
+ * @version 0.1.8.15
  * @since 0.1.8.0
  */
 function bp_album_add_admin_menu() {
@@ -262,7 +256,7 @@ add_action( 'admin_menu', 'bp_album_add_admin_menu' );
 /**
  * Adds the BP-Album admin menu to the WordPress "Network" admin menu.
  *
- * @version 0.1.8.14
+ * @version 0.1.8.15
  * @since 0.1.8.0
  */
 function bp_album_add_network_menu() {
@@ -285,7 +279,7 @@ add_action( 'network_admin_menu', 'bp_album_add_network_menu' );
  * item and all the sub level nav items to the navigation array. This is then
  * rendered in the template.
  *
- * @version 0.1.8.14
+ * @version 0.1.8.15
  * @since 0.1.8.0
  */
 function bp_album_setup_nav() {
@@ -345,7 +339,7 @@ add_action( 'bp_setup_nav', 'bp_album_setup_nav' );
 /**
  * bp_album_single_subnav_filter()
  *
- * @version 0.1.8.14
+ * @version 0.1.8.15
  * @since 0.1.8.0
  */
 function bp_album_single_subnav_filter($link){
@@ -372,7 +366,7 @@ function bp_album_single_subnav_filter($link){
  *  2) Route older template names to use our new template locations and
  *     format.
  *
- * @version 0.1.8.14
+ * @version 0.1.8.15
  * @since 0.1.8.0
  */
 function bp_album_load_template_filter( $found_template, $templates ) {
@@ -395,7 +389,7 @@ function bp_album_load_template_filter( $found_template, $templates ) {
 	// which will act more like a template part.
 	if ( empty( $found_template ) ) {	
 		// register our theme directory to the template stack
-		bp_register_template_stack( 'bp_album_get_template_directory', 14 );
+		bp_register_template_stack( 'bp_album_get_template_directory', 15 );
 
 		// locate_template() will attempt to find the plugins.php template in the
 		// child and parent theme and return the located template when found
@@ -430,7 +424,7 @@ add_filter( 'bp_located_template', 'bp_album_load_template_filter', 10, 2 );
 /**
  * bp_album_load_subtemplate()
  *
- * @version 0.1.8.14
+ * @version 0.1.8.15
  * @since 0.1.8.0
  */
 function bp_album_load_subtemplate( $template_name ) {
@@ -461,7 +455,7 @@ function bp_album_get_template_directory() {
 /**
  * bp_album_upload_path()
  *
- * @version 0.1.8.14
+ * @version 0.1.8.15
  * @since 0.1.8.0
  */
 function bp_album_upload_path(){
@@ -491,7 +485,7 @@ function bp_album_upload_path(){
 /**
  * bp_album_privacy_level_permitted()
  *
- * @version 0.1.8.14
+ * @version 0.1.8.15
  * @since 0.1.8.0
  */
 function bp_album_privacy_level_permitted(){
@@ -513,7 +507,7 @@ function bp_album_privacy_level_permitted(){
 /**
  * bp_album_limits_info()
  *
- * @version 0.1.8.14
+ * @version 0.1.8.15
  * @since 0.1.8.0
  */
 function bp_album_limits_info(){
@@ -580,7 +574,7 @@ function bp_album_limits_info(){
 /**
  * bp_album_get_pictures()
  *
- * @version 0.1.8.14
+ * @version 0.1.8.15
  * @since 0.1.8.0
  */
 function bp_album_get_pictures($args = ''){
@@ -590,7 +584,7 @@ function bp_album_get_pictures($args = ''){
 /**
  * bp_album_get_picture_count()
  *
- * @version 0.1.8.14
+ * @version 0.1.8.15
  * @since 0.1.8.0
  */
 function bp_album_get_picture_count($args = ''){
@@ -600,7 +594,7 @@ function bp_album_get_picture_count($args = ''){
 /**
  * bp_album_get_next_picture()
  *
- * @version 0.1.8.14
+ * @version 0.1.8.15
  * @since 0.1.8.0
  */
 function bp_album_get_next_picture($args = ''){
@@ -611,7 +605,7 @@ function bp_album_get_next_picture($args = ''){
 /**
  * bp_album_get_prev_picture()
  *
- * @version 0.1.8.14
+ * @version 0.1.8.15
  * @since 0.1.8.0
  */
 function bp_album_get_prev_picture($args = ''){
@@ -622,7 +616,7 @@ function bp_album_get_prev_picture($args = ''){
 /**
  * bp_album_add_picture()
  *
- * @version 0.1.8.14
+ * @version 0.1.8.15
  * @since 0.1.8.0
  */
 function bp_album_add_picture($owner_type, $owner_id, $title, $description, $priv_lvl, $date_uploaded, $pic_org_url, $pic_org_path, $pic_mid_url, $pic_mid_path, $pic_thumb_url, $pic_thumb_path){
@@ -655,7 +649,7 @@ function bp_album_add_picture($owner_type, $owner_id, $title, $description, $pri
 /**
  * bp_album_edit_picture()
  *
- * @version 0.1.8.14
+ * @version 0.1.8.15
  * @since 0.1.8.0
  */
 function bp_album_edit_picture($id, $title, $description, $priv_lvl, $enable_comments){
@@ -700,7 +694,7 @@ function bp_album_edit_picture($id, $title, $description, $priv_lvl, $enable_com
 /**
  * bp_album_delete_picture()
  *
- * @version 0.1.8.14
+ * @version 0.1.8.15
  * @since 0.1.8.0
  */
 function bp_album_delete_picture($id=false){
@@ -730,7 +724,7 @@ function bp_album_delete_picture($id=false){
 /**
  * bp_album_delete_by_user_id()
  *
- * @version 0.1.8.14
+ * @version 0.1.8.15
  * @since 0.1.8.0
  */
 function bp_album_delete_by_user_id($user_id, $remove_files = true){
@@ -775,7 +769,7 @@ function bp_album_delete_by_user_id($user_id, $remove_files = true){
  /**
  * bp_album_record_activity()
  *
- * @version 0.1.8.14
+ * @version 0.1.8.15
  * @since 0.1.8.0
  */
 function bp_album_record_activity($pic_data) {
@@ -839,7 +833,7 @@ function bp_album_record_activity($pic_data) {
  /**
  * bp_album_delete_activity()
  *
- * @version 0.1.8.14
+ * @version 0.1.8.15
  * @since 0.1.8.0
  */
 function bp_album_delete_activity( $user_id ) {
@@ -859,7 +853,7 @@ function bp_album_delete_activity( $user_id ) {
  * It's always wise to clean up after a user has been deleted. This stops the database from filling up with
  * redundant information.
  *
- * @version 0.1.8.14
+ * @version 0.1.8.15
  * @since 0.1.8.0
  */
 function bp_album_delete_user_data( $user_id ) {
@@ -980,7 +974,7 @@ function bp_album_do_dump(&$var, $var_name = NULL, $indent = NULL, $reference = 
  * It's always wise to clean up after a user has been deleted. This stops the database from filling up with
  * redundant information.
  *
- * @version 0.1.8.14
+ * @version 0.1.8.15
  * @since 0.1.8.0
  */
 function bp_album_rebuild_activity() {
@@ -1097,7 +1091,7 @@ function bp_album_rebuild_activity() {
 /**
  * Removes all posts that were created by bp_album_rebuild_activity() from the activity stream.
  *
- * @version 0.1.8.14
+ * @version 0.1.8.15
  * @since 0.1.8.0
  */
 function bp_album_undo_rebuild_activity() {

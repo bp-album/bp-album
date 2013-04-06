@@ -6,11 +6,12 @@
  * specific URL is caught. They will first save or manipulate data using business
  * functions, then pass on the user to a template file.
  *
+ * @version 0.1.8.15
  * @since 0.1.8.0
  * @package BP-Album
  * @subpackage Screens
  * @license GPL v2.0
- * @link https://github.com/BP-Media/bp-album
+ * @link https://github.com/bp-abum/bp-album
  *
  * ========================================================================================================
  */
@@ -20,7 +21,7 @@
  *
  * Single picture
  *
- * @version 0.1.8.14
+ * @version 0.1.8.15
  * @since 0.1.8.0
  */
 function bp_album_screen_single() {
@@ -48,7 +49,7 @@ function bp_album_screen_single() {
 /**
  * bp_album_screen_edit_title()
  *
- * @version 0.1.8.14
+ * @version 0.1.8.15
  * @since 0.1.8.0
  */
 function bp_album_screen_edit_title() {
@@ -58,7 +59,7 @@ function bp_album_screen_edit_title() {
 /**
  * bp_album_screen_edit_content()
  *
- * @version 0.1.8.14
+ * @version 0.1.8.15
  * @since 0.1.8.0
  */
 function bp_album_screen_edit_content() {
@@ -133,7 +134,7 @@ function bp_album_screen_edit_content() {
  *
  * An album page
  *
- * @version 0.1.8.14
+ * @version 0.1.8.15
  * @since 0.1.8.0
  */
 function bp_album_screen_pictures() {
@@ -149,7 +150,7 @@ function bp_album_screen_pictures() {
  *
  * Sets up and displays the screen output for the sub nav item "example/screen-two"
  *
- * @version 0.1.8.14
+ * @version 0.1.8.15
  * @since 0.1.8.0
  */
 function bp_album_screen_upload() {
@@ -164,7 +165,7 @@ function bp_album_screen_upload() {
 /**
  * bp_album_screen_upload_title()
  *
- * @version 0.1.8.14
+ * @version 0.1.8.15
  * @since 0.1.8.0
  */
 function bp_album_screen_upload_title() {
@@ -174,7 +175,7 @@ function bp_album_screen_upload_title() {
 /**
  * bp_album_screen_upload_content()
  *
- * @version 0.1.8.14
+ * @version 0.1.8.15
  * @since 0.1.8.0
  */
 function bp_album_screen_upload_content() {
@@ -246,7 +247,7 @@ function bp_album_screen_upload_content() {
 /**
  * bp_album_action_upload()
  *
- * @version 0.1.8.14
+ * @version 0.1.8.15
  * @since 0.1.8.0
  */
 function bp_album_action_upload() {
@@ -280,7 +281,7 @@ function bp_album_action_upload() {
                             case "8": $pic_limit = $bp->album->bp_album_max_priv8_pictures; break;
                             case "9": $pic_limit = $bp->album->bp_album_max_priv9_pictures; break;
                             default: $pic_limit = null;
-                        }	
+                        }
 
 			if($priv_lvl == 10 ) {
 				$pic_limit = is_super_admin() ? false : null;
@@ -458,7 +459,7 @@ add_action('wp','bp_album_action_upload',3);
 /**
  * bp_album_upload_dir()
  *
- * @version 0.1.8.14
+ * @version 0.1.8.15
  * @since 0.1.8.0
  */
 function bp_album_upload_dir() {
@@ -490,7 +491,7 @@ function bp_album_upload_dir() {
 /**
  * bp_album_action_edit()
  *
- * @version 0.1.8.14
+ * @version 0.1.8.15
  * @since 0.1.8.0
  */
 function bp_album_action_edit() {
@@ -601,7 +602,7 @@ add_action('wp','bp_album_action_edit',3);
 /**
  * bp_album_action_delete()
  *
- * @version 0.1.8.14
+ * @version 0.1.8.15
  * @since 0.1.8.0
  */
 function bp_album_action_delete() {
@@ -642,7 +643,7 @@ add_action('wp','bp_album_action_delete',3);
  *
  * Displays sitewide featured content block
  *
- * @version 0.1.8.14
+ * @version 0.1.8.15
  * @since 0.1.8.0
  */
 function bp_album_screen_all_images() {

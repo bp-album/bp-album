@@ -5,11 +5,12 @@
  * Checks that all plugins, API's, and services on the host system are the minimum
  * versions needed for BP-Album to run properly
  *
+ * @version 0.1.8.15
  * @since 0.1.8.14
  * @package BP-Album
  * @subpackage Util
  * @license GPL v2.0
- * @link http://code.google.com/p/buddypress-media/
+ * @link https://github.com/bp-abum/bp-album
  *
  * ========================================================================================================
  */

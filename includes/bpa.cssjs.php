@@ -4,11 +4,12 @@
  * BP-ALBUM CSS/JS CLASS
  * Handles loading CSS and JS
  *
+ * @version 0.1.8.15
  * @since 0.1.8.0
  * @package BP-Album
  * @subpackage CSS/JS
  * @license GPL v2.0
- * @link https://github.com/BP-Media/bp-album
+ * @link https://github.com/bp-abum/bp-album
  *
  * ========================================================================================================
  */
@@ -20,7 +21,7 @@
  * This function will enqueue the components Javascript file, so that you can make
  * use of any Javascript you bundle with your component within your interface screens.
  *
- * @version 0.1.8.14
+ * @version 0.1.8.15
  * @since 0.1.8.0
  */
 function bp_album_add_js() {
@@ -35,7 +36,7 @@ function bp_album_add_js() {
 /**
  * bp_album_add_css()
  *
- * @version 0.1.8.14
+ * @version 0.1.8.15
  * @since 0.1.8.0
  */
 function bp_album_add_css() {

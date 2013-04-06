@@ -3,11 +3,12 @@
 /**
  * BP-ALBUM TEMPLATE TAGS CLASS
  *
+ * @version 0.1.8.15
  * @since 0.1.8.0
  * @package BP-Album
  * @subpackage Template Tags
  * @license GPL v2.0
- * @link http://code.google.com/p/buddypress-media/
+ * @link https://github.com/bp-abum/bp-album
  *
  * ========================================================================================================
  */
@@ -51,7 +52,7 @@ class BP_Album_Template {
 	}
 
 	function __construct( $args = '' ) {
-		global $bp;
+		$bp = buddypress();
 
 
 		$defaults = bp_album_default_query_args();
@@ -168,7 +169,7 @@ function bp_album_the_picture() {
 /**
  * bp_album_has_pictures()
  *
- * @version 0.1.8.14
+ * @version 0.1.8.15
  * @since 0.1.8.0
  */
 function bp_album_has_pictures() {
@@ -180,7 +181,7 @@ function bp_album_has_pictures() {
 /**
  * bp_album_picture_title()
  *
- * @version 0.1.8.14
+ * @version 0.1.8.15
  * @since 0.1.8.0
  */
 function bp_album_picture_title() {
@@ -195,7 +196,7 @@ function bp_album_picture_title() {
 /**
  * bp_album_picture_title_truncate()
  *
- * @version 0.1.8.14
+ * @version 0.1.8.15
  * @since 0.1.8.0
  */
 function bp_album_picture_title_truncate($length = 11) {
@@ -235,7 +236,7 @@ function bp_album_picture_title_truncate($length = 11) {
 /**
  * bp_album_picture_desc()
  *
- * @version 0.1.8.14
+ * @version 0.1.8.15
  * @since 0.1.8.0
  */
 function bp_album_picture_desc() {
@@ -251,7 +252,7 @@ function bp_album_picture_desc() {
 /**
  * bp_album_picture_desc_truncate()
  *
- * @version 0.1.8.14
+ * @version 0.1.8.15
  * @since 0.1.8.0
  */
 function bp_album_picture_desc_truncate($words=55) {
@@ -269,7 +270,7 @@ function bp_album_picture_desc_truncate($words=55) {
 /**
  * bp_album_picture_id()
  *
- * @version 0.1.8.14
+ * @version 0.1.8.15
  * @since 0.1.8.0
  */
 function bp_album_picture_id() {
@@ -285,7 +286,7 @@ function bp_album_picture_id() {
 /**
  * bp_album_picture_url()
  *
- * @version 0.1.8.14
+ * @version 0.1.8.15
  * @since 0.1.8.0
  */
 function bp_album_picture_url() {
@@ -302,7 +303,7 @@ function bp_album_picture_url() {
 /**
  * bp_album_picture_edit_link()
  *
- * @version 0.1.8.14
+ * @version 0.1.8.15
  * @since 0.1.8.0
  */
 function bp_album_picture_edit_link() {
@@ -313,7 +314,7 @@ function bp_album_picture_edit_link() {
 /**
  * bp_album_picture_edit_url()
  *
- * @version 0.1.8.14
+ * @version 0.1.8.15
  * @since 0.1.8.0
  */
 function bp_album_picture_edit_url() {
@@ -341,7 +342,7 @@ function bp_album_picture_delete_link() {
 /**
  * bp_album_picture_delete_url()
  *
- * @version 0.1.8.14
+ * @version 0.1.8.15
  * @since 0.1.8.0
  */
 function bp_album_picture_delete_url() {
@@ -358,7 +359,7 @@ function bp_album_picture_delete_url() {
 /**
  * bp_album_picture_original_url()
  *
- * @version 0.1.8.14
+ * @version 0.1.8.15
  * @since 0.1.8.0
  */
 function bp_album_picture_original_url() {
@@ -385,7 +386,7 @@ function bp_album_picture_original_url() {
 /**
  * bp_album_picture_middle_url()
  *
- * @version 0.1.8.14
+ * @version 0.1.8.15
  * @since 0.1.8.0
  */
 function bp_album_picture_middle_url() {
@@ -411,7 +412,7 @@ function bp_album_picture_middle_url() {
 /**
  * bp_album_picture_thumb_url()
  *
- * @version 0.1.8.14
+ * @version 0.1.8.15
  * @since 0.1.8.0
  */
 function bp_album_picture_thumb_url() {
@@ -437,7 +438,7 @@ function bp_album_picture_thumb_url() {
 /**
  * bp_album_total_picture_count()
  *
- * @version 0.1.8.14
+ * @version 0.1.8.15
  * @since 0.1.8.0
  */
 function bp_album_total_picture_count() {
@@ -453,7 +454,7 @@ function bp_album_total_picture_count() {
 /**
  * bp_album_picture_pagination()
  *
- * @version 0.1.8.14
+ * @version 0.1.8.15
  * @since 0.1.8.0
  */
 function bp_album_picture_pagination($always_show = false) {
@@ -470,7 +471,7 @@ function bp_album_picture_pagination($always_show = false) {
 /**
  * bp_album_picture_pagination_global()
  *
- * @version 0.1.8.14
+ * @version 0.1.8.15
  * @since 0.1.8.0
  */
 function bp_album_picture_pagination_global($always_show = false) {
@@ -487,7 +488,7 @@ function bp_album_picture_pagination_global($always_show = false) {
 /**
  * bp_album_adjacent_links()
  *
- * @version 0.1.8.14
+ * @version 0.1.8.15
  * @since 0.1.8.0
  */
 function bp_album_adjacent_links() {
@@ -506,7 +507,7 @@ function bp_album_adjacent_links() {
 /**
  * bp_album_next_picture_link()
  *
- * @version 0.1.8.14
+ * @version 0.1.8.15
  * @since 0.1.8.0
  */
 function bp_album_next_picture_link($text = ' &raquo;', $title = true) {
@@ -527,7 +528,7 @@ function bp_album_next_picture_link($text = ' &raquo;', $title = true) {
 /**
  * bp_album_next_picture_or_album_link()
  *
- * @version 0.1.8.14
+ * @version 0.1.8.15
  * @since 0.1.8.0
  */
 function bp_album_next_picture_or_album_link($text = ' &raquo;', $title = true) {
@@ -548,7 +549,7 @@ function bp_album_next_picture_or_album_link($text = ' &raquo;', $title = true) 
 /**
  * bp_album_next_picture_url()
  *
- * @version 0.1.8.14
+ * @version 0.1.8.15
  * @since 0.1.8.0
  */
 function bp_album_next_picture_url() {
@@ -565,7 +566,7 @@ function bp_album_next_picture_url() {
 /**
  * bp_album_next_picture_title()
  *
- * @version 0.1.8.14
+ * @version 0.1.8.15
  * @since 0.1.8.0
  */
 function bp_album_next_picture_title() {
@@ -582,7 +583,7 @@ function bp_album_next_picture_title() {
 /**
  * bp_album_has_next_picture()
  *
- * @version 0.1.8.14
+ * @version 0.1.8.15
  * @since 0.1.8.0
  */
 function bp_album_has_next_picture() {
@@ -595,7 +596,7 @@ function bp_album_has_next_picture() {
 /**
  * bp_album_prev_picture_link()
  *
- * @version 0.1.8.14
+ * @version 0.1.8.15
  * @since 0.1.8.0
  */
 function bp_album_prev_picture_link($text = '&laquo; ', $title = true) {
@@ -616,7 +617,7 @@ function bp_album_prev_picture_link($text = '&laquo; ', $title = true) {
 /**
  * bp_album_prev_picture_or_album_link()
  *
- * @version 0.1.8.14
+ * @version 0.1.8.15
  * @since 0.1.8.0
  */
 function bp_album_prev_picture_or_album_link($text = '&laquo; ', $title = true) {
@@ -637,7 +638,7 @@ function bp_album_prev_picture_or_album_link($text = '&laquo; ', $title = true) 
 /**
  * bp_album_prev_picture_url()
  *
- * @version 0.1.8.14
+ * @version 0.1.8.15
  * @since 0.1.8.0
  */
 function bp_album_prev_picture_url() {
@@ -654,7 +655,7 @@ function bp_album_prev_picture_url() {
 /**
  * bp_album_prev_picture_title()
  *
- * @version 0.1.8.14
+ * @version 0.1.8.15
  * @since 0.1.8.0
  */
 function bp_album_prev_picture_title() {
@@ -671,7 +672,7 @@ function bp_album_prev_picture_title() {
 /**
  * bp_album_has_prev_picture()
  *
- * @version 0.1.8.14
+ * @version 0.1.8.15
  * @since 0.1.8.0
  */
 function bp_album_has_prev_picture() {
@@ -684,7 +685,7 @@ function bp_album_has_prev_picture() {
 /**
  * bp_album_pictures_url()
  *
- * @version 0.1.8.14
+ * @version 0.1.8.15
  * @since 0.1.8.0
  */
 function bp_album_pictures_url() {
@@ -701,7 +702,7 @@ function bp_album_pictures_url() {
 /**
  * bp_album_picture_has_activity()
  *
- * @version 0.1.8.14
+ * @version 0.1.8.15
  * @since 0.1.8.0
  */
 function bp_album_picture_has_activity(){
@@ -720,7 +721,7 @@ function bp_album_picture_has_activity(){
 /**
  * bp_album_comments_enabled()
  *
- * @version 0.1.8.14
+ * @version 0.1.8.15
  * @since 0.1.8.0
  */
 function bp_album_comments_enabled() {

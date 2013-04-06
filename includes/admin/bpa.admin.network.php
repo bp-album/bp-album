@@ -4,11 +4,12 @@
  * BP-ALBUM ADMIN CLASS
  * This file is used to add site administration menus to the WordPress network admin backend.
  *
+ * @version 0.1.8.15
  * @since 0.1.8.0
  * @package BP-Album
  * @subpackage Admin
  * @license GPL v2.0
- * @link http://code.google.com/p/buddypress-media/
+ * @link https://github.com/bp-abum/bp-album
  *
  * ========================================================================================================
  */
@@ -18,6 +19,7 @@
  *
  * Checks for form submission, saves component settings and outputs admin screen HTML.
  *
+ * @version 0.1.8.15
  * @since 0.1.8.0
  */
 function bp_album_admin() {
@@ -99,49 +101,12 @@ function bp_album_admin() {
 
 		<p>
 		<?php
-			echo "<a href='http://bit.ly/f5zPJ9'>";
-			_e("Project Calendar", 'bp-album' );
-			echo "</a> - ";
-			_e("View our development schedule in real-time using Pivotal Tracker.", 'bp-album' )
-		?>
-		</p>
-
-		<p>
-		<?php
-			echo "<a href='http://buddypress.org/community/groups/bp-album/forum/'>";
+			echo "<a href='http://buddypress.org/support/forum/plugin-forums/bp-album/'>";
 			_e("Support Forum", 'bp-album' );
 			echo "</a> - ";
 			_e("Need help with the plugin? There are <i>hundreds of other users</i> that can answer your questions on our BuddyPress support forum.", 'bp-album' )
 		?>
 		</p>
-
-		<p>
-		<?php
-			echo "<a href='http://code.google.com/p/buddypress-media/'>";
-			_e("Official Website", 'bp-album' );
-			echo "</a> - ";
-			_e("Our base of operations on the internet and the <i>only</i> source of info that's been checked by our dev team.", 'bp-album' )
-		?>
-		</p>
-
-		<p>
-		<?php
-			echo "<a href='http://code.google.com/p/buddypress-media/wiki/BuddyPressMediaFeaturesList'>";
-			_e("Features List", 'bp-album' );
-			echo "</a> - ";
-			_e("See what features we're adding to upcoming versions of the plugin.", 'bp-album' )
-		?>
-		</p>
-
-		<p>
-		<?php
-			echo "<a href='http://code.google.com/p/buddypress-media/updates/list'>";
-			_e("Activity Feed", 'bp-album' );
-			echo "</a> - ";
-			_e("Up-to-the-second bug reports and code updates via Google Code.", 'bp-album' )
-		?>
-		</p>
-
 
 		<p>
 		    <br>
@@ -282,7 +247,6 @@ function bp_album_admin() {
 			<p>
 			<?php
 			    _e( "If you get broken links when viewing images in BP-Album, it means your server is sending the wrong base URL to the plugin. You can use the image URL re-mapping function to fix this.",'bp-album' );
-			    echo "<a href='http://code.google.com/p/buddypress-media/wiki/UsingTheURLRemapper'> ";
 			    _e("DOCUMENTATION",'bp-album' );
 			    echo "</a>";
 			?>

@@ -3,11 +3,12 @@
 /**
  * BP-ALBUM FILTERS CLASS
  *
+ * @version 0.1.8.15
  * @since 0.1.8.0
  * @package BP-Album
  * @subpackage Filters
  * @license GPL v2.0
- * @link https://github.com/BP-Media/bp-album
+ * @link https://github.com/bp-abum/bp-album
  *
  * ========================================================================================================
  */
@@ -20,7 +21,7 @@
  * if the user disables the activity stream, BuddyPress disables bp_activity_make_nofollow_filter_callback, causing an
  * error if we use it.
  *
- * @version 0.1.8.14
+ * @version 0.1.8.15
  * @since 0.1.8.0
  */
 function bp_album_make_nofollow_filter( $text ) {

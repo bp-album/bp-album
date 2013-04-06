@@ -2,6 +2,8 @@
 /**
  * Backwards compatibililty functions for < BP 1.7.
  *
+ * @version 0.1.8.15
+ * @since 0.1.8.15
  * @author r-a-y
  * @package BP-Album
  * @subpackage Backpat
