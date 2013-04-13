@@ -5,7 +5,7 @@ Requires at least: 3.5
 Tested up to: 3.6
 Stable tag: 0.1.8.15
 
-Photo Albums for BuddyPress. Includes Posts to Activity Stream, Member Comments, and Gallery Privacy Controls.
+BuddyPress Album is a lightweight photo album plugin for BuddyPress, with Posts to Activity Stream, Member Comments, and Privacy Controls.
 
 == Description ==
 Bp-Album adds full photo album capabilities to BuddyPress, mimicking Facebook's photo app.
